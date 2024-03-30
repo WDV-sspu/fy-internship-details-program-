@@ -62,12 +62,12 @@ class Form2(Form2Template):
     try:
         sem = float(sem_input.rstrip('%')) if sem_input.strip() else None 
         if sem is not None and not 0 <= sem <= 100:
-            alert("CET score must be between 0 and 100")
+            alert("SEM score must be between 0 and 100")
             return
     except ValueError:
         alert("Invalid input for SEM score")
         return
 
-    anvil.server.call('submit2', tenth=tenth, twelth=twelth, cet=cet, jee=jee, sem=sem_input)
+    anvil.server.call('submit2', tenth=tenth, twelth=twelth, cet=cet, jee=jee, sem=sem)
     open_form('Form3')
     

@@ -19,9 +19,10 @@ import anvil.server
 def submit1(name, prn, address, email, mobile, blood):
     app_tables.personalinfo.add_row(name=name, prn=prn, email=email, mobile=mobile, address=address, blood=blood)
 
+@anvil.server.callable
 def submit2(tenth, twelth, cet, jee, sem):
     app_tables.academicinfo.add_row(tenth=tenth, twelth=twelth, cet=cet, jee=jee, sem=sem)
 
-
+@anvil.server.callable
 def submit3(certification, linkedin, experience):
-    app_tables.expericenceinfo.add_row(certification=certification, linkedin=linkedin, experience=experience)
+    app_tables.expericeneinfo.add_row(certification=certification, linkedin=linkedin, experience=experience)
