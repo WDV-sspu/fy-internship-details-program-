@@ -21,9 +21,9 @@ def submit1(self,name,prn,address,email,mobile,blood):
    self.prn=prn
    self.address=address
    self.email=email
-   self.mobile=mobile if not mobile.isdigit() or len(mobile) != 10:
-        raise ValueError("Mobile number must be a 10-digit numeric value.")
+   self.mobile=mobile
    self.blood=blood
+   app_tables.Submit1.addrow(name=name,prn=prn,email=email,mobile=mobile,address=address,blood=blood)
 
 def submit2(self,tenth,twelth,cet,jee,sem,):
    self.tenth=tenth
@@ -37,11 +37,3 @@ def submit3(self,certification,linkdin,experience):
    self.linkdin=linkdin
    self.experience=experience
 
-anvil.email.send(from_name = "My App Support", 
-                 to = email,
-                 subject = "Welcome",
-                 text = "Welcome to My App!")
-
-def val_mobile(self):
-  
-   

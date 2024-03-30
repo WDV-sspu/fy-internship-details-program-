@@ -1,0 +1,13 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+- name: rich_text_1
+  properties: {content: This is form 2}
+  type: RichText
+  layout_properties: {slot: default}
