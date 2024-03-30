@@ -28,6 +28,7 @@ components:
   properties: {placeholder: PRN}
   type: TextBox
   layout_properties: {slot: default}
+  event_bindings: {lost_focus: text_box_2_lost_focus}
 - name: label_3
   properties: {text: Email}
   type: Label
@@ -44,6 +45,7 @@ components:
   properties: {placeholder: Mobile Number}
   type: TextBox
   layout_properties: {slot: default}
+  event_bindings: {lost_focus: text_box_4_lost_focus}
 - name: label_5
   properties: {text: Address}
   type: Label

@@ -1,7 +1,7 @@
 allow_embedding: false
 package_name: FY_internship_details_program_
 db_schema:
-  submit1:
+  personalinfo:
     client: none
     server: full
     columns:
@@ -26,9 +26,23 @@ db_schema:
     - name: Column7
       admin_ui: {width: 200, order: 6}
       type: link_multiple
-      target: submit1
-    title: Submit1
-  submit2:
+      target: personalinfo
+    title: personalinfo
+  academicinfo:
+    client: none
+    server: full
+    columns:
+    - name: certification
+      admin_ui: {width: 200, order: 0}
+      type: media
+    - name: linkdin
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: experience
+      admin_ui: {width: 200, order: 2}
+      type: string
+    title: academicinfo
+  expericenceinfo:
     client: none
     server: full
     columns:
@@ -47,21 +61,7 @@ db_schema:
     - name: sem
       admin_ui: {width: 200, order: 4}
       type: number
-    title: Submit2
-  submit3:
-    client: none
-    server: full
-    columns:
-    - name: certification
-      admin_ui: {width: 200, order: 0}
-      type: media
-    - name: linkdin
-      admin_ui: {width: 200, order: 1}
-      type: string
-    - name: experience
-      admin_ui: {width: 200, order: 2}
-      type: string
-    title: Submit3
+    title: expericenceinfo
 name: 'FY internship details program '
 startup_form: Form1
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,

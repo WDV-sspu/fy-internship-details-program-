@@ -14,15 +14,30 @@ class Form1(Form1Template):
 
   def button_1_click(self, **event_args):
     name = self.text_box_1.text
-    prn = int(self.text_box_2.text)
+    prn_input = self.text_box_2.text
     email = self.text_box_3.text
-    mobile = int(self.text_box_4.text)
+    mobile_input = self.text_box_4.text
     address = self.text_box_5.text
     blood = self.text_box_6.text
-    anvil.server.call('submit1',name=name,prn=prn,address=address,email=email,mobile=mobile,blood=blood)
+
+    try:
+        prn = int(prn_input)
+        if len(prn_input) != 10:
+            alert("PRN must be exactly 10 digits")
+            return  
+    except ValueError:
+        alert("Invalid PRN: Please enter a numeric value")
+        return  
+
+    try:
+        mobile = int(mobile_input)
+        if len(mobile_input) != 10:
+            alert("Mobile number must be exactly 10 digits")
+            return  
+    except ValueError:
+        alert("Invalid mobile number: Please enter a numeric value")
+        return  
+
+    anvil.server.call('submit1', name=name, prn=prn, address=address, email=email, mobile=mobile, blood=blood)
+
     open_form('Form2')
-    
-  
-  def text_box_1_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass

@@ -16,24 +16,12 @@ import anvil.server
 #   print("Hello, " + name + "!")
 #   return 42
 @anvil.server.callable
-def submit1(self,name,prn,address,email,mobile,blood):
-   self.name=name
-   self.prn=prn
-   self.address=address
-   self.email=email
-   self.mobile=mobile
-   self.blood=blood
-   app_tables.Submit1.addrow(name=name,prn=prn,email=email,mobile=mobile,address=address,blood=blood)
+def submit1(name, prn, address, email, mobile, blood):
+    app_tables.personalinfo.add_row(name=name, prn=prn, email=email, mobile=mobile, address=address, blood=blood)
 
-def submit2(self,tenth,twelth,cet,jee,sem,):
-   self.tenth=tenth
-   self.twelth=twelth
-   self.cet=cet
-   self.jee=jee
-   self.sem=sem
+def submit2(tenth, twelth, cet, jee, sem):
+    app_tables.academicinfo.add_row(tenth=tenth, twelth=twelth, cet=cet, jee=jee, sem=sem)
 
-def submit3(self,certification,linkdin,experience):
-   self.certification=certification
-   self.linkdin=linkdin
-   self.experience=experience
 
+def submit3(certification, linkedin, experience):
+    app_tables.expericenceinfo.add_row(certification=certification, linkedin=linkedin, experience=experience)
