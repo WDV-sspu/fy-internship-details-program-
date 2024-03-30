@@ -7,3 +7,42 @@ components:
   properties: {}
   name: content_panel
   layout_properties: {slot: default}
+  components:
+  - name: image_1
+    properties: {source: 'https://login.sspu.ac.in/images/SSPUlogo.png'}
+    type: Image
+    layout_properties: {grid_position: 'MVGXTT,TBQRGH'}
+- name: rich_text_1
+  properties: {content: This form is for the participants of the B.tech CSIT department FY students. The summer internship student details fill in all the details properly.,
+    format: plain_text, align: center, font: bold, font_size: 17}
+  type: RichText
+  layout_properties: {slot: default}
+- name: label_1
+  properties: {text: Certifications}
+  type: Label
+  layout_properties: {slot: default}
+- name: text_box_1
+  properties: {placeholder: Name of the Certifications}
+  type: TextBox
+  layout_properties: {slot: default}
+- name: label_2
+  properties: {text: Linkdin URL}
+  type: Label
+  layout_properties: {slot: default}
+- name: link_1
+  properties: {text: URL}
+  type: Link
+  layout_properties: {slot: default}
+- name: label_3
+  properties: {text: Experience}
+  type: Label
+  layout_properties: {slot: default}
+- name: text_box_2
+  properties: {placeholder: Your Experience}
+  type: TextBox
+  layout_properties: {slot: default}
+- name: button_1
+  properties: {text: Submit}
+  type: Button
+  layout_properties: {slot: default}
+  event_bindings: {click: button_1_click}

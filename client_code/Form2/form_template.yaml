@@ -46,6 +46,14 @@ components:
   properties: {placeholder: Percentage % or (0)}
   type: TextBox
   layout_properties: {slot: default}
+- name: label_5
+  properties: {text: SEM}
+  type: Label
+  layout_properties: {slot: default}
+- name: text_box_5
+  properties: {placeholder: Percentage % or (0)}
+  type: TextBox
+  layout_properties: {slot: default}
 - name: button_1
   properties: {text: Next}
   type: Button

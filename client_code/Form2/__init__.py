@@ -19,7 +19,10 @@ class Form2(Form2Template):
   def button_1_click(self, **event_args):
     tenth = self.text_box_1.text
     twelth = self.text_box_2.text
-    jee
-    
+    jee = self.text_box_3.text
+    cet = self.text_box_4.text
+    sem = self.text_box_5.text
+    anvil.server.call('submit2', tenth=tenth, twelth=twelth, cet=cet, jee=jee, sem=sem)
     open_form('Form3')
+    
     
