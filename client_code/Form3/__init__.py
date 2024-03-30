@@ -15,7 +15,6 @@ class Form3(Form3Template):
   def button_1_click(self, **event_args):
     linkdin = self.text_box_1.text
     experience = self.text_box_2.text
-    certification = self.text_box_certification.text 
     selected_options = [option for option in self.multiple_select_1.selected_values]
 
     media_file = anvil.media.upload()
