@@ -21,13 +21,13 @@ components:
   properties: {text: Certifications}
   type: Label
   layout_properties: {slot: default}
-- name: text_box_1
-  properties: {placeholder: Name of the Certifications}
-  type: TextBox
-  layout_properties: {slot: default}
 - name: label_2
   properties: {text: Linkdin URL}
   type: Label
+  layout_properties: {slot: default}
+- name: file_loader_1
+  properties: {}
+  type: FileLoader
   layout_properties: {slot: default}
 - name: link_1
   properties: {text: URL}

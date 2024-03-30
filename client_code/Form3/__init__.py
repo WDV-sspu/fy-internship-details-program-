@@ -16,4 +16,5 @@ class Form3(Form3Template):
     certification = self.text_box_1.text
     linkdin = self.link_1.url
     experience = self.text_box_2.text
+    anvil.server.callable("")
     

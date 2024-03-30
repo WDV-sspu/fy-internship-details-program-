@@ -61,3 +61,4 @@ class Form2(Form2Template):
 
     anvil.server.call('submit2', tenth=tenth, twelth=twelth, cet=cet, jee=jee, sem=sem_input)
     open_form('Form3')
+    

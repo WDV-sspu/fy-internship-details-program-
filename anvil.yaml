@@ -28,7 +28,7 @@ db_schema:
       type: link_multiple
       target: personalinfo
     title: personalinfo
-  academicinfo:
+  expericeneinfo:
     client: none
     server: full
     columns:
@@ -41,8 +41,8 @@ db_schema:
     - name: experience
       admin_ui: {width: 200, order: 2}
       type: string
-    title: academicinfo
-  expericenceinfo:
+    title: expericeneinfo
+  academicinfo:
     client: none
     server: full
     columns:
@@ -61,7 +61,7 @@ db_schema:
     - name: sem
       admin_ui: {width: 200, order: 4}
       type: number
-    title: expericenceinfo
+    title: academicinfo
 name: 'FY internship details program '
 startup_form: Form1
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
