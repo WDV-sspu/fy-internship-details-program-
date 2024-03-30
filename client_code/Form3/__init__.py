@@ -13,7 +13,7 @@ class Form3(Form3Template):
     # Any code you write here will run before the form opens.
 
   def button_1_click(self, **event_args):
-    linkdin = self.link_1.url
+    linkdin = self.text_box_1.text
     experience = self.text_box_2.text
-    anvil.server.callable("")
     
+    anvil.server.call('submit3',certification=certification, linkedin=linkedin, experience=experience)

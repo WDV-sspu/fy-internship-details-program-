@@ -29,9 +29,9 @@ components:
   properties: {text: Linkdin URL}
   type: Label
   layout_properties: {slot: default}
-- name: link_1
-  properties: {text: URL}
-  type: Link
+- name: text_box_1
+  properties: {}
+  type: TextBox
   layout_properties: {slot: default}
 - name: label_3
   properties: {text: Experience}
