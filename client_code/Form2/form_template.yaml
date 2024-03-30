@@ -12,7 +12,42 @@ components:
     format: plain_text, role: null, align: center, font_size: 17, font: bold}
   type: RichText
   layout_properties: {slot: default}
+  components: []
 - name: label_1
-  properties: {}
+  properties: {text: 10th}
   type: Label
   layout_properties: {slot: default}
+- name: text_box_1
+  properties: {placeholder: Percentage %}
+  type: TextBox
+  layout_properties: {slot: default}
+  event_bindings: {pressed_enter: text_box_1_pressed_enter}
+- name: label_2
+  properties: {text: 12th}
+  type: Label
+  layout_properties: {slot: default}
+- name: text_box_2
+  properties: {placeholder: Percentage %}
+  type: TextBox
+  layout_properties: {slot: default}
+- name: label_3
+  properties: {text: JEE (Optional)}
+  type: Label
+  layout_properties: {slot: default}
+- name: text_box_3
+  properties: {placeholder: Percentage % OR (0)}
+  type: TextBox
+  layout_properties: {slot: default}
+- name: label_4
+  properties: {text: CET (Optional)}
+  type: Label
+  layout_properties: {slot: default}
+- name: text_box_4
+  properties: {placeholder: Percentage % or (0)}
+  type: TextBox
+  layout_properties: {slot: default}
+- name: button_1
+  properties: {text: Next}
+  type: Button
+  layout_properties: {slot: default}
+  event_bindings: {click: button_1_click}
