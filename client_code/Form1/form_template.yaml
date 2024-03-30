@@ -7,3 +7,21 @@ components:
   properties: {}
   name: content_panel
   layout_properties: {slot: default}
+- type: RichText
+  properties: {}
+  name: rich_text_1
+  layout_properties: {slot: default}
+- type: Label
+  properties: {}
+  name: label_1
+  layout_properties: {slot: default}
+- type: TextBox
+  properties: {}
+  name: text_box_1
+  layout_properties: {slot: default}
+  event_bindings: {pressed_enter: text_box_1_pressed_enter}
+- type: Button
+  properties: {text: button_1}
+  name: button_1
+  layout_properties: {slot: default}
+  event_bindings: {click: button_1_click}
