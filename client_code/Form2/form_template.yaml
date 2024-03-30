@@ -27,7 +27,7 @@ components:
   type: Label
   layout_properties: {slot: default}
 - name: text_box_2
-  properties: {placeholder: Percentage %}
+  properties: {placeholder: 'Percentage % '}
   type: TextBox
   layout_properties: {slot: default}
 - name: label_3
