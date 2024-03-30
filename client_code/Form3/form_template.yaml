@@ -21,14 +21,9 @@ components:
   properties: {text: Certifications}
   type: Label
   layout_properties: {slot: default}
-- name: drop_down_1
-  properties: {include_placeholder: false, placeholder: All the folder has to be selected at once(Using CTRL) and then click UPLOAD.}
-  type: DropDown
-  layout_properties: {slot: default}
-  data_bindings: []
-- name: file_loader_1
-  properties: {multiple: true}
-  type: FileLoader
+- name: text_box_3
+  properties: {placeholder: Enter the Certification You have completed}
+  type: TextBox
   layout_properties: {slot: default}
 - name: label_2
   properties: {text: Linkdin URL}
