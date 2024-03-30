@@ -21,8 +21,12 @@ components:
   properties: {text: Certifications}
   type: Label
   layout_properties: {slot: default}
-- name: file_loader_1
+- name: drop_down_1
   properties: {}
+  type: DropDown
+  layout_properties: {slot: default}
+- name: file_loader_1
+  properties: {multiple: true}
   type: FileLoader
   layout_properties: {slot: default}
 - name: label_2

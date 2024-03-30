@@ -15,5 +15,14 @@ class Form3(Form3Template):
   def button_1_click(self, **event_args):
     linkdin = self.text_box_1.text
     experience = self.text_box_2.text
-    
-    anvil.server.call('submit3',certification=certification, linkedin=linkedin, experience=experience)
+    certification = self.text_box_certification.text 
+    selected_options = [option for option in self.multiple_select_1.selected_values]
+
+    media_file = anvil.media.upload()
+
+    if media_file:
+        media_url = media_file.get_url()
+    else:
+        media_url = None
+
+    anvil.server.call('submit3', certification=certification, linkedin=linkedin, experience=experience, media_url=media_url, selected_options=selected_options)
