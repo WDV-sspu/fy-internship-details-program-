@@ -1,13 +1,11 @@
-from ._anvil_designer import Form2Template
+from ._anvil_designer import Form1Template
 from anvil import *
-import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from anvil import Form
+import anvil.server
 
-
-class Form2(Form):
+class Form2(Form2Template):
     def __init__(self, **properties):
         # Any initialization code can go here, if needed
         pass

@@ -19,6 +19,7 @@ class Form1(Form1Template):
     mobile_input = self.text_box_4.text
     address = self.text_box_5.text
     blood = self.text_box_6.text
+    open_form('Form2')
 
     try:
         prn = int(prn_input)
@@ -39,4 +40,4 @@ class Form1(Form1Template):
         return  
 
     anvil.server.call('submit1', name=name, prn=prn, address=address, email=email, mobile=mobile, blood=blood)
-    self.open_form('Form2')
+    
