@@ -21,7 +21,7 @@ def submit1(name, prn, address, email, mobile, blood):
 
 @anvil.server.callable
 def submit2(tenth, twelth, cet, jee, sem):
-    app_tables.combine_data.add_row(tenth=tenth, twelth=twelth, cet=cet, jee=jee, sem=sem)
+    app_tables.combine_data.(tenth=tenth, twelth=twelth, cet=cet, jee=jee, sem=sem)
 
 @anvil.server.callable
 def submit3(certification, linkedin, experience):
