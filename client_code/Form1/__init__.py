@@ -39,5 +39,4 @@ class Form1(Form1Template):
         return  
 
     anvil.server.call('submit1', name=name, prn=prn, address=address, email=email, mobile=mobile, blood=blood)
-
-    open_form('Form2')
+    
