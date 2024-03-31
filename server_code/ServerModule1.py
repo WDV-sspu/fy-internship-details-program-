@@ -15,46 +15,36 @@ import anvil.server
 # def say_hello(name):
 #   print("Hello, " + name + "!")
 #   return 42
+
+
+import anvil.server
+
 @anvil.server.callable
 def submit1(name, prn, address, email, mobile, blood):
-    # Check if a row already exists in the combine_data table
-    rows = app_tables.combine_data.search()
-    if rows:
-        # Update the first row found
-        combine_data = rows[0]
-    else:
-        # Create a new row if no row exists
-        combine_data = app_tables.combine_data.add_row()
-    
-    # Update the row with the data from submit1
+    # Update the row in combine_data table
+    combine_data = app_tables.combine_data.get_or_create()
     combine_data.update(name=name, prn=prn, address=address, email=email, mobile=mobile, blood=blood)
+
+    # Update the row in personalinfo table
+    personal_info = app_tables.personalinfo.get_or_create()
+    personal_info.update(name=name, prn=prn, address=address, email=email, mobile=mobile, blood=blood)
 
 @anvil.server.callable
 def submit2(tenth, twelth, cet, jee, sem):
-    # Search for existing rows in the combine_data table
-    rows = app_tables.combine_data.search()
-    
-    if rows:
-        # Update the first row found
-        combine_data = rows[0]
-    else:
-        # Create a new row if no row exists
-        combine_data = app_tables.combine_data.add_row()
-    
-    # Update the row with the data from submit2
+    # Update the row in combine_data table
+    combine_data = app_tables.combine_data.get_or_create()
     combine_data.update(tenth=tenth, twelth=twelth, cet=cet, jee=jee, sem=sem)
+
+    # Update the row in academicinfo table
+    academic_info = app_tables.academicinfo.get_or_create()
+    academic_info.update(tenth=tenth, twelth=twelth, cet=cet, jee=jee, sem=sem)
 
 @anvil.server.callable
 def submit3(certification, linkedin, experience):
-    # Search for existing rows in the combine_data table
-    rows = app_tables.combine_data.search()
-    
-    if rows:
-        # Update the first row found
-        combine_data = rows[0]
-    else:
-        # Create a new row if no row exists
-        combine_data = app_tables.combine_data.add_row()
-    
-    # Update the row with the data from submit3
+    # Update the row in combine_data table
+    combine_data = app_tables.combine_data.get_or_create()
     combine_data.update(certification=certification, linkedin=linkedin, experience=experience)
+
+    # Update the row in experienceinfo table
+    experience_info = app_tables.experienceinfo.get_or_create()
+    experience_info.update(certification=certification, linkedin=linkedin, experience=experience)
