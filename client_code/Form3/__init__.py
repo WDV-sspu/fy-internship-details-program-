@@ -10,9 +10,7 @@ class Form3(Form3Template):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    # Any code you write here will run before the form opens.
-
-# Python code in Anvil Form
+    # Any code you write here will run before the form openthon code in Anvil Form
     def __init__(self, **properties):
         self.init_components(**properties)
 
