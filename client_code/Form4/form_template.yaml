@@ -14,7 +14,9 @@ components:
   layout_properties: {slot: default}
   components: []
 - name: rich_text_1
-  properties: {content: 'Your Data has been sucessfully recorded. :)', font: bold,
-    font_size: 25, align: center}
+  properties: {content: 'Your Data has been sucessfully recorded. :)
+
+      You will receive email regarding this internship form. please check your email.',
+    font: '', font_size: 27, align: center}
   type: RichText
   layout_properties: {slot: default}
