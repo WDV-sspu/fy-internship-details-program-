@@ -40,3 +40,48 @@ def submit3(certification, linkedin, experience):
     
     # Update the row with data from submit3
     expericeneinfo.update(certification=certification, linkedin=linkedin, experience=experience)
+
+@anvil.server.callable
+def merge_data():
+    # Retrieve data from personalinfo table
+    personalinfo_rows = app_tables.personalinfo.search()
+    # Retrieve data from academicinfo table
+    academicinfo_rows = app_tables.academicinfo.search()
+    # Retrieve data from expericeneinfo table
+    expericeneinfo_rows = app_tables.expericeneinfo.search()
+
+    print("Number of rows in academicinfo table:", len(academicinfo_rows))
+    print("Contents of academicinfo table:", academicinfo_rows)
+
+    # Create or get the single row from combine_data table
+    if len(personalinfo_rows) == 1:
+        personalinfo_row = personalinfo_rows[0]
+        combine_data_row = app_tables.combine_data.get_or_create(name=personalinfo_row['name'], prn=personalinfo_row['prn'])
+    else:
+        return "No data found in personalinfo table!"
+
+    # Update combine_data row with data from academicinfo table
+    if len(academicinfo_rows) == 1:
+        academicinfo_row = academicinfo_rows[0]
+        combine_data_row.update(
+            tenth=academicinfo_row['tenth'],
+            twelth=academicinfo_row['twelth'],
+            cet=academicinfo_row['cet'],
+            jee=academicinfo_row['jee'],
+            sem=academicinfo_row['sem']
+        )
+    else:
+        return "Incorrect number of rows in academicinfo table!"
+
+    # Update combine_data row with data from expericeneinfo table
+    if len(expericeneinfo_rows) == 1:
+        expericeneinfo_row = expericeneinfo_rows[0]
+        combine_data_row.update(
+            certification=expericeneinfo_row['certification'],
+            linkedin=expericeneinfo_row['linkedin'],
+            experience=expericeneinfo_row['experience']
+        )
+    else:
+        return "Incorrect number of rows in expericeneinfo table!"
+
+    return "Data merged successfully!"
