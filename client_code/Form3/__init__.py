@@ -13,10 +13,6 @@ class Form3(Form3Template):
     # Any code you write here will run before the form opens.
 
 # Python code in Anvil Form
-
-from anvil import *
-
-class MyForm(MyFormTemplate):
     def __init__(self, **properties):
         self.init_components(**properties)
 
@@ -29,8 +25,6 @@ class MyForm(MyFormTemplate):
             # Get the URL of the uploaded file
             media_url = media_file.get_url()
 
-            # Pass the URL to the server function
-            anvil.server.call('submit3', certification=media_url)
 
         except Exception as e:
             # Handle any errors
@@ -44,7 +38,7 @@ class MyForm(MyFormTemplate):
             experience = self.text_box_3.text
 
             # Call the server function with the input values
-            anvil.server.call('submit3', certification=certificate, linkedin=linkedin, experience=experience)
+            anvil.server.call('submit3', certification=media_url, linkedin=linkedin, experience=experience)
 
             # Open Form4
             open_form('Form4')
