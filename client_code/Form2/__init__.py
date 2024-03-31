@@ -4,8 +4,10 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from anvil import Form
 
-class Form2:
+
+class Form2(Form):
     def __init__(self, **properties):
         # Any initialization code can go here, if needed
         pass
