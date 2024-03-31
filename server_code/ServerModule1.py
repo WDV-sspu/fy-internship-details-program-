@@ -39,7 +39,7 @@ def submit2(tenth, twelth, cet, jee, sem):
     else:
         # Create a new row if no row exists
         combine_data = app_tables.combine_data.add_row()
-    
+      
     # Update the row with the data from submit2
     combine_data.update(tenth=tenth, twelth=twelth, cet=cet, jee=jee, sem=sem)
 
