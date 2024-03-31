@@ -21,11 +21,6 @@ components:
   properties: {text: Certifications}
   type: Label
   layout_properties: {slot: default}
-- name: file_loader_1
-  properties: {file_types: 'Image,PDF'}
-  type: FileLoader
-  layout_properties: {slot: default}
-  event_bindings: {change: file_loader_1_change}
 - name: text_box_3
   properties: {placeholder: Enter the Certification You have completed}
   type: TextBox
