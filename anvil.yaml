@@ -62,7 +62,6 @@ db_schema:
       admin_ui: {width: 200, order: 4}
       type: number
     title: academicinfo
-  combine_data: {title: combine_data}
 name: 'FY internship details program '
 startup_form: Form1
 uplink_visible: true
