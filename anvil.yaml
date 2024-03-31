@@ -62,6 +62,53 @@ db_schema:
       admin_ui: {width: 200, order: 4}
       type: number
     title: academicinfo
+  combine_data:
+    client: none
+    server: full
+    columns:
+    - name: name
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: prn
+      admin_ui: {width: 200, order: 1}
+      type: number
+    - name: email
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: mobile
+      admin_ui: {width: 200, order: 3}
+      type: number
+    - name: address
+      admin_ui: {width: 200, order: 4}
+      type: string
+    - name: blood
+      admin_ui: {width: 200, order: 5}
+      type: string
+    - name: tenth
+      admin_ui: {width: 200, order: 6}
+      type: number
+    - name: twelth
+      admin_ui: {width: 200, order: 7}
+      type: number
+    - name: cet
+      admin_ui: {width: 200, order: 8}
+      type: number
+    - name: jee
+      admin_ui: {width: 200, order: 9}
+      type: number
+    - name: sem
+      admin_ui: {width: 200, order: 10}
+      type: number
+    - name: linkedin
+      admin_ui: {width: 200, order: 11}
+      type: string
+    - name: experience
+      admin_ui: {width: 200, order: 12}
+      type: string
+    - name: certification
+      admin_ui: {width: 200, order: 13}
+      type: string
+    title: combine_data
 name: 'FY internship details program '
 startup_form: Form1
 uplink_visible: true
