@@ -20,17 +20,23 @@ import anvil.server
 def submit1(name, prn, address, email, mobile, blood):
     # Add a new row to combine_data table
     personalinfo = app_tables.personalinfo.add_row()
-  
+    
+    # Update the row with data from submit1
+    personalinfo.update(name=name, prn=prn, address=address, email=email, mobile=mobile, blood=blood)
+
 
 @anvil.server.callable
 def submit2(tenth, twelth, cet, jee, sem):
     # Add a new row to combine_data table
-    academicinfo = app_tables.combine_data.add_row()
-  
+    academicinfo = app_tables.academicinfo.add_row()
+    
+    # Update the row with data from submit2
+    academicinfo.update(tenth=tenth, twelth=twelth, cet=cet, jee=jee, sem=sem)
+
 @anvil.server.callable
 def submit3(certification, linkedin, experience):
     # Add a new row to combine_data table
-    experienceinfo = app_tables.combine_data.add_row()
+    expericeneinfo = app_tables.expericeneinfo.add_row()
     
-
-  combine_data.add_row('')
+    # Update the row with data from submit3
+    expericeneinfo.update(certification=certification, linkedin=linkedin, experience=experience)
