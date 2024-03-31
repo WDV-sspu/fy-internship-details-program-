@@ -63,6 +63,11 @@ db_schema:
       type: number
     title: academicinfo
   combine_data: {title: combine_data}
+  combinedata:
+    title: Table 4
+    client: none
+    server: full
+    columns: []
 name: 'FY internship details program '
 startup_form: Form1
 uplink_visible: true
