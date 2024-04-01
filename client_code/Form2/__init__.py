@@ -66,5 +66,5 @@ class Form2(Form2Template):
             alert("Invalid input for SEM score")
             return
 
-        anvil.server.call('submit2', tenth=tenth, twelth=twelth, cet=cet, jee=jee, sem=sem, row_id=self.personal_info_row_id)
+        anvil.server.call('submit2', tenth=tenth, twelth=twelth, cet=cet, jee=jee, sem=sem)
         open_form('Form3')
