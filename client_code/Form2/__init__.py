@@ -20,6 +20,8 @@ class Form2(Form2Template):
         jee_input = self.text_box_3.text
         cet_input = self.text_box_4.text
         sem_input = self.text_box_5.text
+        anvil.server.call('submit2', tenth=tenth, twelth=twelth, cet=cet, jee=jee, sem=sem, row_id=self.combine_info_row_id)
+        open_form('Form3')
         
         try:
             tenth = float(tenth_input.rstrip('%'))  
@@ -66,5 +68,4 @@ class Form2(Form2Template):
             alert("Invalid input for SEM score")
             return
 
-        anvil.server.call('submit2', tenth=tenth, twelth=twelth, cet=cet, jee=jee, sem=sem, row_id=self.combine_info_row_id)
-        open_form('Form3')
+       
