@@ -23,7 +23,7 @@ class Form3(Form3Template):
             experience = self.text_box_2.text
 
             # Call the server function with the input values
-            anvil.server.call('submit3', certification=certification, linkedin=linkedin, experience=experience)
+            anvil.server.call('submit3', certification=certification, linkedin=linkedin, experience=experience, row_id=self.personal_info_row_id)
         
             # Open Form4
             open_form('Form4')
