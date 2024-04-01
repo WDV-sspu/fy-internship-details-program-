@@ -27,7 +27,7 @@ def submit1(name, prn, address, email, mobile, blood):
     mobile=mobile,
     blood=blood
   )
-  return combine_data_row.get()
+  return combine_data_row
 
 @anvil.server.callable
 def submit2(tenth, twelth, cet, jee, sem, row_id):

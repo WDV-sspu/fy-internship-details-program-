@@ -15,15 +15,15 @@ class Form2(Form2Template):
         pass
 
     def button_1_click(self, **event_args):
-        tenth_input = self.text_box_1.text
-        twelth_input = self.text_box_2.text
-        jee_input = self.text_box_3.text
-        cet_input = self.text_box_4.text
-        sem_input = self.text_box_5.text
+        tenth_input = float(self.text_box_1.text.rstrip('%'))
+        twelth_input = float(self.text_box_2.text.rstrip('%'))
+        jee_input =float(self.text_box_3.text.rstrip('%'))
+        cet_input = float(self.text_box_4.text.rstrip('%'))
+        sem_input = float(self.text_box_5.text.rstrip('%'))
         
         
         try:
-            tenth = float(tenth_input.rstrip('%'))  
+            tenth = tenth_input
             if not 0 <= tenth <= 100:
                 alert("Tenth percentage must be between 0 and 100")
                 return
@@ -32,7 +32,7 @@ class Form2(Form2Template):
             return
 
         try:
-            twelth = float(twelth_input.rstrip('%'))  
+            twelth = twelth_input
             if not 0 <= twelth <= 100:
                 alert("Twelth percentage must be between 0 and 100")
                 return
@@ -41,7 +41,7 @@ class Form2(Form2Template):
             return
 
         try:
-            jee = float(jee_input.rstrip('%')) if jee_input.strip() else None 
+            jee = jee_input  
             if jee is not None and not 0 <= jee <= 100:
                 alert("JEE score must be between 0 and 100")
                 return
@@ -50,7 +50,7 @@ class Form2(Form2Template):
             return
 
         try:
-            cet = float(cet_input.rstrip('%')) if cet_input.strip() else None 
+            cet = cet_input 
             if cet is not None and not 0 <= cet <= 100:
                 alert("CET score must be between 0 and 100")
                 return
@@ -59,7 +59,7 @@ class Form2(Form2Template):
             return
 
         try:
-            sem = float(sem_input.rstrip('%')) if sem_input.strip() else None 
+            sem = sem_input 
             if sem is not None and not 0 <= sem <= 100:
                 alert("SEM score must be between 0 and 100")
                 return
@@ -67,7 +67,7 @@ class Form2(Form2Template):
             alert("Invalid input for SEM score")
             return
 
-        anvil.server.call('submit2', tenth=tenth, twelth=twelth, cet=cet, jee=jee, sem=sem, row_id=self.combine_info_row_id)
+        anvil.server.call('submit2', tenth=tenth_input, twelth=twelth_input, cet=cet_input, jee=jee_input, sem=sem_input, row_id=self.combine_info_row_id)
         open_form('Form3')
 
        
