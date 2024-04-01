@@ -30,10 +30,9 @@ def submit1(name, prn, address, email, mobile, blood):
   return combine_data_row
 
 @anvil.server.callable
-def submit2(tenth, twelth, cet, jee, sem, row_id):
+def submit2(tenth, twelth, cet, jee, sem):
     # Get the existing row from combine_data table
-    combine_data_row = app_tables.combine_data.get()
-
+    combine_data_id = app_tables.combine_data.get_by_id()
     # Update the row with data from submit2
     combine_data_row.update(
         tenth=tenth,

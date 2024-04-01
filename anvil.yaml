@@ -109,6 +109,21 @@ db_schema:
       admin_ui: {width: 200, order: 13}
       type: string
     title: combine_data
+  table_5:
+    client: none
+    server: full
+    columns:
+    - name: ID
+      admin_ui: {width: 200, order: 0}
+      type: link_single
+      target: combine_data
+    - name: name
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: tenth
+      admin_ui: {width: 200, order: 2}
+      type: number
+    title: Table 5
 name: 'FY internship details program '
 startup_form: Form1
 uplink_visible: true
