@@ -31,17 +31,17 @@ def submit1(name, prn, address, email, mobile, blood):
 
 @anvil.server.callable
 def submit2(tenth, twelth, cet, jee, sem, row_id):
-  # Get the existing row from combine_data table
-  combine_data_row = app_tables.combine_data
+    # Get the existing row from combine_data table
+    combine_data_row = app_tables.combine_data.get_by_id(row_id)
 
-  # Update the row with data from submit2
-  combine_data_row.update(
-    tenth=tenth,
-    twelth=twelth,
-    cet=cet,
-    jee=jee,
-    sem=sem
-  )
+    # Update the row with data from submit2
+    combine_data_row.update(
+        tenth=tenth,
+        twelth=twelth,
+        cet=cet,
+        jee=jee,
+        sem=sem
+    )
 
 @anvil.server.callable
 def submit3(certification, linkedin, experience, row_id):
