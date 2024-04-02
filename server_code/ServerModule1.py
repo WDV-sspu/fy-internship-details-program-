@@ -18,7 +18,7 @@ import anvil.server
 
 @anvil.server.callable
 class personalinfo:
-  def __init__(self,name,prn,address,email,mobile,blood):
+  def submit1(self,name,prn,address,email,mobile,blood):
     self.name = name
     self.prn = prn
     self.address = address
