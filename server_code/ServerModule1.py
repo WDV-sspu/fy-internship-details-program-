@@ -17,12 +17,6 @@ import anvil.server
 #   return 42
 
 @anvil.server.callable
-class personalinfo:
-  def submit1(self,name,prn,address,email,mobile,blood):
-    self.name = name
-    self.prn = prn
-    self.address = address
-    self.email = email
-    self.mobile = mobile
-    self.blood = blood
-     
+def submit1(self,name,prn,address,email,mobile,blood):
+    app_tables.all_for_one.add_row(name, prn, )
+    
