@@ -18,4 +18,5 @@ import anvil.server
 
 @anvil.server.callable
 def submit1(self,name,prn,address,email,mobile,blood):
-    app_tables.all_for_one.add_row(name, prn, )
+    app_tables.all_for_one.add_row(name, prn, address,email, moblie, blood)
+  
