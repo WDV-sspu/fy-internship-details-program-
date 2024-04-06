@@ -11,7 +11,42 @@ db_schema:
     - name: prn
       admin_ui: {width: 200, order: 1}
       type: number
+    - name: address
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: email
+      admin_ui: {width: 200, order: 3}
+      type: string
+    - name: mobile
+      admin_ui: {width: 200, order: 4}
+      type: number
+    - name: blood
+      admin_ui: {width: 200, order: 5}
+      type: string
     title: all_for_one
+  personal:
+    client: none
+    server: full
+    columns:
+    - name: name
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: prn
+      admin_ui: {width: 200, order: 1}
+      type: number
+    - name: address
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: email
+      admin_ui: {width: 200, order: 3}
+      type: string
+    - name: mobile
+      admin_ui: {width: 200, order: 4}
+      type: number
+    - name: blood
+      admin_ui: {width: 200, order: 5}
+      type: string
+    title: personal
 name: 'FY internship details program '
 startup_form: Form1
 uplink_visible: true
