@@ -14,7 +14,7 @@ class Form1(Form1Template):
 
     def button_1_click(self, **event_args):
         # Define and retrieve data variables
-        name = self.text_box_1.text
+        name1 = self.text_box_1.text
         prn_input = self.text_box_2.text
         email = self.text_box_3.text
         mobile_input = self.text_box_4.text
@@ -40,5 +40,5 @@ class Form1(Form1Template):
             return
 
         # Call the server function and pass the data
-        anvil.server.call('submit1', name, prn_input, address, email, mobile_input, blood)
+        anvil.server.call('submit1', name1, prn_input, address, email, mobile_input, blood)
         open_form('Form2')

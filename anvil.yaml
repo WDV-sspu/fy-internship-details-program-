@@ -5,8 +5,8 @@ db_schema:
     client: none
     server: full
     columns:
-    - name: name
-      admin_ui: {width: 200}
+    - name: name4
+      admin_ui: {order: 0, width: 200}
       type: string
     - name: prn
       admin_ui: {width: 200, order: 1}
