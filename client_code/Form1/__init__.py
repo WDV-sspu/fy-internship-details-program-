@@ -40,5 +40,5 @@ class Form1(Form1Template):
             return
 
         # Call the server function and pass the data
-        anvil.server.call('submit1',name1,prn_input,email,mobile_input,address,blood)
+        anvil.server.call('submit1',name1,prn,email,mobile,address,blood)
         open_form('Form2')
