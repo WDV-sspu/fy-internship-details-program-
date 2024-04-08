@@ -23,7 +23,6 @@ def submit1(name, prn, email, mobile, address, blood):
     # For example, you can save the data to a table in Anvil's Data Tables
     app_tables.personal.add_row(name=name, prn=prn, email=email, mobile=mobile, address=address, blood=blood)
     app_tables.all_for_one.add_row(name=name, prn=prn, email=email, mobile=mobile, address=address, blood=blood)
-    combined_row = {name= }
 
 @anvil.server.callable
 def submit2(tenth,twelth,jee,cet,sem):
