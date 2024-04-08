@@ -47,6 +47,26 @@ db_schema:
       admin_ui: {width: 200, order: 5}
       type: string
     title: personal
+  acedemic:
+    client: none
+    server: full
+    columns:
+    - name: 10th
+      admin_ui: {width: 200, order: 0}
+      type: number
+    - name: 12th
+      admin_ui: {width: 200, order: 1}
+      type: number
+    - name: jee
+      admin_ui: {width: 200, order: 2}
+      type: number
+    - name: cet
+      admin_ui: {width: 200, order: 3}
+      type: number
+    - name: sem
+      admin_ui: {width: 200, order: 4}
+      type: number
+    title: acedemic
 name: 'FY internship details program '
 startup_form: Form1
 uplink_visible: true
