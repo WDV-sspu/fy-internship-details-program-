@@ -114,6 +114,3 @@ services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
-- source: /runtime/services/anvil/email.yml
-  client_config: {}
-  server_config: {test_mode: true}
