@@ -16,8 +16,11 @@ import anvil.server
 #   print("Hello, " + name + "!")
 #   return 42
 
+
 @anvil.server.callable
 def submit1(name2,prn,address,email,mobile,blood):
     app_tables.personal.add_row(name=name2,prn=prn,address=address,mobile=mobile,email=email,blood=blood)
 
     app_tables.all_for_one.add_row(name4=name2,prn=prn,address=address,mobile=mobile,email=email,blood=blood)
+
+
