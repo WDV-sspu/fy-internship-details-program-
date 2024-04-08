@@ -22,7 +22,18 @@ def submit1(name2,prn,address,email,mobile,blood):
     
     app_tables.all_for_one.add_row(name4=name2,prn=prn,address=address,mobile=mobile,email=email,blood=blood)
 
-def submit2(10th,12th,jee,cet,sem):
-    app_tables
+@anvil.server.callable
+def submit2(tenth,twelth,jee,cet,sem):
+    app_tables.acedemic.add_row(tenth=tenth,twelth=twelth,jee=jee,cet=cet,sem=sem)
+
+    app_tables.all_for_one.add_row(tenth=tenth,twelth=twelth,jee=jee,cet=cet,sem=sem)
+
+#linkedin = linkdin dalla hai
+#certification data type = Text dalla hai
+@anvil.server.callable
+def submit3(certifications,linkdin,experience):
+    app_tables.experience.add_row(certifications=certifications,linkdin=linkdin,experience=experience)
+
+    app_tables.all_for_one.add_row(certifications=certifications,linkdin=linkdin,experience=experience)
 
 

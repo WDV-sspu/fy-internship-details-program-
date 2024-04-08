@@ -32,4 +32,5 @@ class Form3(Form3Template):
             # Handle other exceptions
             alert(f"An error occurred: {e}")
 
-  
+        anvil.server.call('submit3',certification,linkedin,experience)
+        open_form('Form4') 

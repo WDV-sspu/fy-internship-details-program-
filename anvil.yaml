@@ -23,6 +23,30 @@ db_schema:
     - name: blood
       admin_ui: {width: 200, order: 5}
       type: string
+    - name: tenth
+      admin_ui: {width: 200, order: 6}
+      type: number
+    - name: twelth
+      admin_ui: {width: 200, order: 7}
+      type: number
+    - name: jee
+      admin_ui: {width: 200, order: 8}
+      type: number
+    - name: cet
+      admin_ui: {width: 200, order: 9}
+      type: number
+    - name: sem
+      admin_ui: {width: 200, order: 10}
+      type: number
+    - name: certifications
+      admin_ui: {width: 200, order: 11}
+      type: string
+    - name: linkdin
+      admin_ui: {width: 200, order: 12}
+      type: string
+    - name: experience
+      admin_ui: {width: 200, order: 13}
+      type: string
     title: all_for_one
   personal:
     client: none
@@ -51,11 +75,11 @@ db_schema:
     client: none
     server: full
     columns:
-    - name: 10th
-      admin_ui: {width: 200, order: 0}
+    - name: tenth
+      admin_ui: {order: 0, width: 200}
       type: number
-    - name: 12th
-      admin_ui: {width: 200, order: 1}
+    - name: twelth
+      admin_ui: {order: 1, width: 200}
       type: number
     - name: jee
       admin_ui: {width: 200, order: 2}
@@ -67,6 +91,20 @@ db_schema:
       admin_ui: {width: 200, order: 4}
       type: number
     title: acedemic
+  experience:
+    client: none
+    server: full
+    columns:
+    - name: certifications
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: linkdin
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: experience
+      admin_ui: {width: 200, order: 2}
+      type: string
+    title: experience
 name: 'FY internship details program '
 startup_form: Form1
 uplink_visible: true
