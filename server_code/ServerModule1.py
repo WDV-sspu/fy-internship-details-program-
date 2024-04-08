@@ -15,12 +15,11 @@ import anvil.server
 # def say_hello(name):
 #   print("Hello, " + name + "!")
 #   return 42
-
 @anvil.server.callable
-def submit1(name2,prn,address,email,mobile,blood):
-    app_tables.personal.add_row(name=name2,prn=prn,address=address,mobile=mobile,email=email,blood=blood)
-    
-    app_tables.all_for_one.add_row(name4=name2,prn=prn,address=address,mobile=mobile,email=email,blood=blood)
+def submit1(name, prn, email, mobile, address, blood):
+    # Here you can process the submitted data, save it to a database, or perform any server-side operations
+    # For example, you can save the data to a table in Anvil's Data Tables
+    app_tables.my_data.add_row(name=name, prn=prn, email=email, mobile=mobile, address=address, blood=blood)
 
 @anvil.server.callable
 def submit2(tenth,twelth,jee,cet,sem):

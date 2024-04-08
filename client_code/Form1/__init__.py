@@ -1,10 +1,3 @@
-from ._anvil_designer import Form1Template
-from anvil import *
-import anvil.tables as tables
-import anvil.tables.query as q
-from anvil.tables import app_tables
-import anvil.server
-
 class Form1(Form1Template):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
@@ -40,5 +33,7 @@ class Form1(Form1Template):
             return
 
         # Call the server function and pass the data
-        anvil.server.call('submit1',name1,prn_input,email,mobile_input,address,blood)
+        anvil.server.call('submit1', name1, prn_input, email, mobile_input, address, blood)
+
+        # Open Form2 after submitting the data
         open_form('Form2')
