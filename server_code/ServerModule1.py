@@ -6,6 +6,8 @@ from anvil.tables import app_tables
 import anvil.server
 
 
+
+
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
 #
@@ -24,6 +26,7 @@ def submit1(name, prn, email, mobile, address, blood):
     app_tables.personal.add_row(name=name, prn=prn, email=email, mobile=mobile, address=address, blood=blood)
     app_tables.all_for_one.add_row(name=name, prn=prn, email=email, mobile=mobile, address=address, blood=blood)
 
+
 @anvil.server.callable
 def submit2(tenth,twelth,jee,cet,sem):
     app_tables.acedemic.add_row(tenth=tenth,twelth=twelth,jee=jee,cet=cet,sem=sem)
@@ -35,15 +38,9 @@ def submit3(certifications,linkdin,experience):
     app_tables.experience.add_row(certifications=certifications,linkdin=linkdin,experience=experience)
     app_tables.all_for_one.add_row(certifications=certifications,linkdin=linkdin,experience=experience)
 
-def fetch_all_data():
-    personal_data = [row.to_dict() for row in app_tables.personal.search()]
-    academic_data = [row.to_dict() for row in app_tables.acedemic.search()]
-    experience_data = [row.to_dict() for row in app_tables.experience.search()]
-    all_for_data = personal_data + academic_data + experience_data
-    return all_for_data
-
-
 @anvil.server.callable
-def get_all_data():
-    return fetch_all_data()
-    
+def combine_data():
+    # Retrieve the rows from each table
+    personal_rows = app_tables.personal.search()
+    academic_rows = app_tables.acedemic.search()
+    experience_rows = app_tables.experience.search()
