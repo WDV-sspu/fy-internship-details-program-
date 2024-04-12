@@ -37,10 +37,3 @@ def submit2(tenth,twelth,jee,cet,sem):
 def submit3(certifications,linkdin,experience):
     app_tables.experience.add_row(certifications=certifications,linkdin=linkdin,experience=experience)
     app_tables.all_for_one.add_row(certifications=certifications,linkdin=linkdin,experience=experience)
-
-@anvil.server.callable
-def combine_data():
-    # Retrieve the rows from each table
-    personal_rows = app_tables.personal.search()
-    academic_rows = app_tables.acedemic.search()
-    experience_rows = app_tables.experience.search()
