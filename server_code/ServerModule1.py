@@ -37,4 +37,4 @@ def submit2(tenth,twelth,jee,cet,sem):
 def submit3(certifications,linkdin,experience):
     app_tables.experience.add_row(certifications=certifications,linkdin=linkdin,experience=experience)
     app_tables.all_for_one.add_row(certifications=certifications,linkdin=linkdin,experience=experience)
-    q. all_of(app_table all_for_one)
+  
