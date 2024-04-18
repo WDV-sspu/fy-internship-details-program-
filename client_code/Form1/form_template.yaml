@@ -28,7 +28,7 @@ components:
   properties: {placeholder: PRN}
   type: TextBox
   layout_properties: {slot: default}
-  event_bindings: {lost_focus: text_box_2_lost_focus}
+  event_bindings: {}
 - name: label_3
   properties: {text: Email}
   type: Label
@@ -45,7 +45,7 @@ components:
   properties: {placeholder: Mobile Number}
   type: TextBox
   layout_properties: {slot: default}
-  event_bindings: {lost_focus: text_box_4_lost_focus}
+  event_bindings: {}
 - name: label_5
   properties: {text: Address}
   type: Label
@@ -103,7 +103,7 @@ components:
   type: TextBox
   layout_properties: {slot: default}
 - name: label_12
-  properties: {text: 'Experience '}
+  properties: {text: 'Achievements '}
   type: Label
   layout_properties: {slot: default}
 - name: text_box_12
@@ -132,3 +132,9 @@ components:
   layout_properties: {slot: default}
   event_bindings: {click: button_1_click}
   data_bindings: []
+- name: rich_text_2
+  properties: {format: restricted_html, content: 'This form is created by 3 FY students
+      Sujhal Gurav, Saksham Verma and Nayan Gaikwad.', role: null, align: center,
+    font: 'italic ', font_size: 17}
+  type: RichText
+  layout_properties: {slot: default}

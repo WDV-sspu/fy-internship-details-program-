@@ -1,10 +1,5 @@
 from ._anvil_designer import Form1Template
 from anvil import *
-import anvil.google.auth, anvil.google.drive
-from anvil.google.drive import app_files
-import anvil.tables as tables
-import anvil.tables.query as q
-from anvil.tables import app_tables
 import anvil.server
 
 class Form1(Form1Template):
@@ -16,12 +11,20 @@ class Form1(Form1Template):
 
     def button_1_click(self, **event_args):
         # Define and retrieve data variables
-        name1 = self.text_box_1.text
+        name = self.text_box_1.text
         prn_input = self.text_box_2.text
         email = self.text_box_3.text
         mobile_input = self.text_box_4.text
         address = self.text_box_5.text
         blood = self.text_box_6.text
+        tenth_input = self.text_box_7.text
+        twelth_input = self.text_box_8.text
+        jee_input = self.text_box_9.text
+        cet_input = self.text_box_10.text
+        sem_input = self.text_box_11.text
+        experience = self.text_box_12.text
+        linkedin = self.text_box_13.text
+        work_experience = self.text_box_14.text
 
         try:
             prn = int(prn_input)
@@ -41,6 +44,52 @@ class Form1(Form1Template):
             alert("Invalid mobile number: Please enter a numeric value")
             return
 
+        try:
+            tenth = float(tenth_input.rstrip('%'))  
+            if not 0 <= tenth <= 100:
+                alert("Tenth percentage must be between 0 and 100")
+                return
+        except ValueError:
+            alert("Invalid input for tenth percentage")
+            return
+
+        try:
+            twelth = float(twelth_input.rstrip('%'))  
+            if not 0 <= twelth <= 100:
+                alert("Twelth percentage must be between 0 and 100")
+                return
+        except ValueError:
+            alert("Invalid input for twelth percentage")
+            return
+
+        try:
+            jee = float(jee_input.rstrip('%')) if jee_input.strip() else None 
+            if jee is not None and not 0 <= jee <= 100:
+                alert("JEE score must be between 0 and 100")
+                return
+        except ValueError:
+            alert("Invalid input for JEE score")
+            return
+
+        try:
+            cet = float(cet_input.rstrip('%')) if cet_input.strip() else None 
+            if cet is not None and not 0 <= cet <= 100:
+                alert("CET score must be between 0 and 100")
+                return
+        except ValueError:
+            alert("Invalid input for CET score")
+            return
+
+        try:
+            sem = float(sem_input.rstrip('%')) if sem_input.strip() else None 
+            if sem is not None and not 0 <= sem <= 100:
+                alert("SEM score must be between 0 and 100")
+                return
+        except ValueError:
+            alert("Invalid input for SEM score")
+            return
+
         # Call the server function and pass the data
-        anvil.server.call('submit1', name1, prn, email, mobile, address, blood)
+        anvil.server.call('submit1',name=name,prn=prn,email=email,mobile=mobile,address=address,blood=blood,tenth=tenth,twelth=twelth,jee=jee,cet=cet,sem=sem,experience=experience,linkedin=linkedin,work_experience=work_experience)
+
         open_form('thankyou')

@@ -5,47 +5,47 @@ db_schema:
     client: full
     server: full
     columns:
+    - name: experience
+      admin_ui: {width: 200}
+      type: string
+    - name: blood
+      admin_ui: {width: 200}
+      type: string
+    - name: cet
+      admin_ui: {width: 200}
+      type: number
+    - name: address
+      admin_ui: {width: 200}
+      type: string
+    - name: email
+      admin_ui: {width: 200}
+      type: string
+    - name: jee
+      admin_ui: {width: 200}
+      type: unresolved
+    - name: linkedin
+      admin_ui: {width: 200}
+      type: string
+    - name: mobile
+      admin_ui: {width: 200}
+      type: number
     - name: name
       admin_ui: {order: 0, width: 200}
       type: string
     - name: prn
-      admin_ui: {width: 200, order: 1}
-      type: number
-    - name: address
-      admin_ui: {width: 200, order: 2}
-      type: string
-    - name: email
-      admin_ui: {width: 200, order: 3}
-      type: string
-    - name: mobile
-      admin_ui: {width: 200, order: 4}
-      type: number
-    - name: blood
-      admin_ui: {width: 200, order: 5}
-      type: string
-    - name: tenth
-      admin_ui: {width: 200, order: 6}
-      type: number
-    - name: twelth
-      admin_ui: {width: 200, order: 7}
-      type: number
-    - name: jee
-      admin_ui: {width: 200, order: 8}
-      type: number
-    - name: cet
-      admin_ui: {width: 200, order: 9}
+      admin_ui: {order: 0.5, width: 200}
       type: number
     - name: sem
-      admin_ui: {width: 200, order: 10}
+      admin_ui: {width: 200}
       type: number
-    - name: certifications
-      admin_ui: {width: 200, order: 11}
-      type: string
-    - name: linkdin
-      admin_ui: {width: 200, order: 12}
-      type: string
-    - name: experience
-      admin_ui: {width: 200, order: 13}
+    - name: tenth
+      admin_ui: {width: 200}
+      type: number
+    - name: twelth
+      admin_ui: {width: 200}
+      type: number
+    - name: work_experience
+      admin_ui: {width: 200}
       type: string
     title: all_for_one
   personal:
@@ -112,8 +112,8 @@ runtime_options: {version: 2, client_version: '3', server_version: python3-sandb
   server_spec: null}
 services:
 - source: /runtime/services/tables.yml
-  client_config: {}
-  server_config: {}
+  client_config: {enable_v2: false}
+  server_config: {auto_create_missing_columns: true}
 - source: /runtime/services/google.yml
   client_config: {}
   server_config: {}
