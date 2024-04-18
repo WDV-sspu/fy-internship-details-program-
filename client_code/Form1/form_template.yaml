@@ -83,7 +83,7 @@ components:
   type: Label
   layout_properties: {slot: default}
 - name: text_box_9
-  properties: {placeholder: in % (if not given type NA)}
+  properties: {placeholder: in % (if not give 00)}
   type: TextBox
   layout_properties: {slot: default}
 - name: label_10
@@ -91,7 +91,7 @@ components:
   type: Label
   layout_properties: {slot: default}
 - name: text_box_10
-  properties: {placeholder: in % (if not given type NA)}
+  properties: {placeholder: in % (if not given type 00)}
   type: TextBox
   layout_properties: {slot: default}
 - name: label_11
@@ -119,11 +119,15 @@ components:
   type: TextBox
   layout_properties: {slot: default}
 - name: label_14
-  properties: {text: 'Work experince '}
+  properties: {text: 'Work experience '}
   type: Label
   layout_properties: {slot: default}
+- name: text_box_14
+  properties: {placeholder: 'if none type NA '}
+  type: TextBox
+  layout_properties: {slot: default}
 - name: button_1
-  properties: {text: 'Next '}
+  properties: {text: Submit}
   type: Button
   layout_properties: {slot: default}
   event_bindings: {click: button_1_click}
