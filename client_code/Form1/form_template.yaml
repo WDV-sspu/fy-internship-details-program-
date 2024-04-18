@@ -62,6 +62,66 @@ components:
   properties: {placeholder: Blood Group}
   type: TextBox
   layout_properties: {slot: default}
+- name: label_7
+  properties: {text: '10th '}
+  type: Label
+  layout_properties: {slot: default}
+- name: text_box_7
+  properties: {placeholder: in %}
+  type: TextBox
+  layout_properties: {slot: default}
+- name: label_8
+  properties: {text: "12th \n"}
+  type: Label
+  layout_properties: {slot: default}
+- name: text_box_8
+  properties: {placeholder: in %}
+  type: TextBox
+  layout_properties: {slot: default}
+- name: label_9
+  properties: {text: JEE}
+  type: Label
+  layout_properties: {slot: default}
+- name: text_box_9
+  properties: {placeholder: in % (if not given type NA)}
+  type: TextBox
+  layout_properties: {slot: default}
+- name: label_10
+  properties: {text: 'MHCET '}
+  type: Label
+  layout_properties: {slot: default}
+- name: text_box_10
+  properties: {placeholder: in % (if not given type NA)}
+  type: TextBox
+  layout_properties: {slot: default}
+- name: label_11
+  properties: {text: 'SEM '}
+  type: Label
+  layout_properties: {slot: default}
+- name: text_box_11
+  properties: {placeholder: 'in % '}
+  type: TextBox
+  layout_properties: {slot: default}
+- name: label_12
+  properties: {text: 'Experience '}
+  type: Label
+  layout_properties: {slot: default}
+- name: text_box_12
+  properties: {placeholder: 'certifications. projects '}
+  type: TextBox
+  layout_properties: {slot: default}
+- name: label_13
+  properties: {text: 'Linkedln id '}
+  type: Label
+  layout_properties: {slot: default}
+- name: text_box_13
+  properties: {placeholder: 'paste the link '}
+  type: TextBox
+  layout_properties: {slot: default}
+- name: label_14
+  properties: {text: 'Work experince '}
+  type: Label
+  layout_properties: {slot: default}
 - name: button_1
   properties: {text: 'Next '}
   type: Button
